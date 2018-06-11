@@ -1,14 +1,31 @@
 {
 	"parser": "babel-eslint",
-	"plugins": ["react"],
+	"plugins": ["react", "jsx-a11y", "import", "prettier"],
 	"rules": {
+		"no-console": "off",
+		"quotes": ["error", "single"],
 		"indent": [2, "tab"],
-		"no-tabs": 0
+		"no-tabs": 0,
+		"react/jsx-uses-react": "error",
+		"react/jsx-uses-vars": "error"
 		//"prop-types": [2]
 	},
-	"extends": ["airbnb-base", "plugin:react/recommended"],
+	"extends": [
+		"react-airbnb-prettier",
+		"plugin:react/recommended",
+		"eslint:recommended",
+		"prettier",
+		"prettier/flowtype",
+		"prettier/react",
+		"prettier/standard"
+	],
+
 	"env": {
 		"browser": true,
-		"node": true
+		"node": true,
+		"es6": true
+	},
+	"globals": {
+		"document": false
 	}
 }

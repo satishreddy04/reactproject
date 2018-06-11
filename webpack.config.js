@@ -7,7 +7,7 @@ module.exports = {
 		'react-hot-loader/patch', // this will help to apply the changes in the browser without reloading the browser
 		'./src/index.js'
 	],
-	//here we are adding dome loaders which will be responsible to bundle our source files
+	// here we are adding dome loaders which will be responsible to bundle our source files
 	module: {
 		rules: [
 			{
@@ -41,10 +41,11 @@ module.exports = {
 	},
 	// here we are telling our webpack to output our bundle.js
 	output: {
-		path: path.resolve(__dirname + '/dist'),
+		path: path.resolve(`${__dirname}/dist`),
 		publicPath: '/public/',
 		filename: 'bundle.js'
 	},
+	devtool: 'eval-source-map',
 	plugins: [new webpack.HotModuleReplacementPlugin()],
 	// configuration will be providing the options for our dev server
 	devServer: {

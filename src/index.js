@@ -1,21 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import PropTypes from 'prop-types';
+import App from './app';
 
 import './style.scss';
 
-const title = 'My new react project fromdasd scratch ';
-
 ReactDOM.render(
-	<div>
-		{title}
+	<App />,
 
-		<button type="button" className="btn btn-danger">
-			Hello
-		</button>
-	</div>,
-
-	document.getElementById('app'),
+	document.getElementById('app')
 );
-
-module.hot.accept();
+if (module.hot) {
+	module.hot.accept();
+}
